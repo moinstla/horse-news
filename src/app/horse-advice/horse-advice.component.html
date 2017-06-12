@@ -1,3 +1,6 @@
-<h1 *ngFor="let post of posts" (click)="goToDetailPage(post)">{{post.name}}</h1>
-
+<h1>Horse Advice</h1>
+<hr>
+<h3 *ngFor="let post of posts" (click)="goToDetailPage(post)">{{post.name}}</h3>
+<hr>
+<h3>New Post:</h3>
 <app-post-form (newPostSender)="newPost($event)"></app-post-form>
