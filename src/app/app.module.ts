@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HorsePersonalsComponent } from './horse-personals/horse-personals.component';
 import { HorseAdviceComponent } from './horse-advice/horse-advice.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PostFormComponent } from './post-form/post-form.component';
     WelcomeComponent,
     HorsePersonalsComponent,
     HorseAdviceComponent,
-    PostFormComponent
+    PostFormComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

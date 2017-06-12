@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
+import { Router } from '@angular/router';
 import { PostService } from '../post.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { PostService } from '../post.service';
 export class HorsePersonalsComponent implements OnInit {
   posts: Post[];
 
-  constructor(private postService: PostService) { }
+  constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
     let workingPosts = this.postService.getPosts();
@@ -28,6 +29,10 @@ export class HorsePersonalsComponent implements OnInit {
     post.category = "horse-personals";
     this.posts.push(post);
   }
+
+  goToDetailPage(clickedPost: Post) {
+    this.router.navigate(['posts', clickedPost.id]);
+  };
 
 
 }
