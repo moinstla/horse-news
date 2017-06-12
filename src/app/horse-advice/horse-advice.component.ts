@@ -3,12 +3,12 @@ import { Post } from '../post.model';
 import { PostService } from '../post.service';
 
 @Component({
-  selector: 'app-horse-personals',
-  templateUrl: './horse-personals.component.html',
-  styleUrls: ['./horse-personals.component.css'],
+  selector: 'app-horse-advice',
+  templateUrl: './horse-advice.component.html',
+  styleUrls: ['./horse-advice.component.css'],
   providers: [PostService]
 })
-export class HorsePersonalsComponent implements OnInit {
+export class HorseAdviceComponent implements OnInit {
   posts: Post[];
 
   constructor(private postService: PostService) { }
@@ -17,17 +17,14 @@ export class HorsePersonalsComponent implements OnInit {
     let workingPosts = this.postService.getPosts();
     let tempPosts = [];
     workingPosts.forEach((post) => {
-      if(post.category === "horse-personals") {
+      if(post.category === "horse-advice") {
         tempPosts.push(post);
       }
     });
     this.posts = tempPosts;
   }
-
   newPost(post) {
-    post.category = "horse-personals";
+    post.category = "horse-advice";
     this.posts.push(post);
   }
-
-
 }

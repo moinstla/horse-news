@@ -1,0 +1,17 @@
+<div>
+  <label>Name:</label>
+  <input type="text" class="form-control" #newName><br>
+  <label>Content:</label>
+  <input type="text" class="form-control" #newContent><br>
+  <label>Image URL:</label>
+  <input type="text" class="form-control" #newImage><br>
+  <br>
+  <button class="btn btn-sm btn-default" (click)="submitForm(
+    newName.value,
+    newContent.value,
+    newImage.value);
+    newName.value='';
+    newContent.value='';
+    newImage.value='';">Submit</button>
+    <!-- <button class="btn btn-sm btn-default" (click)="newAnimalFormHide()">Hide</button> -->
+</div>
